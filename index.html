@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ Studio Design - Oficial</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
+            background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
+            color: #eee; 
+            overflow-x: hidden;
+        }
+        
+        /* CABEÇALHO - AJUSTE DE IMPACTO NA LOGO */
+        header { 
+            background-color: #000; 
+            padding: 20px 50px; /* Aumentei o respiro lateral */
+            border-bottom: 2px solid #ffcc00; 
+            display: flex; 
+            align-items: center; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-logo {
+            height: 120px; /* Tamanho imponente para leitura total da marca */
+            width: auto;
+            display: block;
+            filter: brightness(1.1); /* Realça os detalhes brancos da logo */
+            transition: transform 0.3s ease;
+        }
+        .header-logo:hover {
+            transform: scale(1.02); /* Leve interação ao passar o mouse */
+        }
+
+        /* Mantendo todo o restante intacto para não quebrar o site */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('logos/pjstudio.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            height: 400px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+        }
+        .hero h1 { font-size: 36px; margin-bottom: 10px; text-transform: uppercase; color: #fff; }
+        .hero h1 span { color: #ffcc00; }
+        .btn-whats { background-color: #25d366; color: #fff; padding: 14px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+
+        .services-container { padding: 80px 20px; background-color: rgba(255, 255, 255, 0.02); text-align: center; }
+        .services-container h2 { font-size: 30px; text-transform: uppercase; margin-bottom: 50px; color: #fff; letter-spacing: 2px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .service-card { background: #1a1a1a; padding: 40px; border-radius: 15px; border-top: 4px solid #ffcc00; box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
+        .service-card h3 { color: #ffcc00; text-transform: uppercase; margin-bottom: 25px; font-size: 26px; border-bottom: 1px solid rgba(255,204,0,0.2); padding-bottom: 15px; }
+        .service-card li { margin-bottom: 18px; color: #ffffff; font-size: 20px; font-weight: 500; line-height: 1.5; text-align: left;}
+        .service-card li::before { content: "✓ "; color: #ffcc00; font-weight: bold; margin-right: 12px; }
+
+        .portfolio-section { padding: 80px 20px; text-align: center; }
+        .swiper { width: 100%; max-width: 950px; height: 500px; border-radius: 20px; background: #111; }
+        .swiper-slide { background-size: contain; background-repeat: no-repeat; background-position: center; }
+
+        .logos-section { padding: 100px 20px; background: #0a0a0a; text-align: center; }
+        .logos-grid-pj { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
+        .logos-grid-pj img { width: 100%; height: 180px; object-fit: contain; background-color: #fff; border-radius: 12px; padding: 20px; }
+
+        footer { background: #000; color: #777; padding: 40px; text-align: center; border-top: 2px solid #ffcc00; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logos/pjstudio.jpg" alt="PJ Studio Design Logo" class="header-logo">
+    </header>
+
+    <section class="hero">
+        <h1>Sua empresa merece uma <span>Presença Digital</span> Profissional</h1>
+        <a href="https://wa.me/5524981196037" target="_blank" class="btn-whats">Falar com Especialista</a>
+    </section>
+
+    <section class="services-container">
+        <h2>O que fazemos por você:</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Identidade Visual</h3>
+                <ul>
+                    <li>Criação de Logos Profissionais</li>
+                    <li>Artes para Redes Sociais</li>
+                    <li>Cartões de Visita e Panfletos</li>
+                    <li>Banners e Materiais de Divulgação</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Desenvolvimento</h3>
+                <ul>
+                    <li>Sistemas PDV Personalizados</li>
+                    <li>Programas para Empresas</li>
+                    <li>Landing Pages e Sites</li>
+                    <li>Gestão de Estoque e Orçamentos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('https://lojaalves4.github.io/ARTE_PRECO_APP/mezap.1.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('https://lojaalves4.github.io/ARTE_PRECO_APP/oficina.1.jpg');"></div>
+            </div>
+            <div class="swiper-button-next" style="color: #ffcc00"></div>
+            <div class="swiper-button-prev" style="color: #ffcc00"></div>
+        </div>
+    </section>
+
+    <section class="logos-section">
+        <div class="logos-grid-pj">
+            <img src="logos/1.jpg" alt="Logo PJ Studio">
+            <img src="logos/candote.jpg" alt="Logo Candote Cars">
+            <img src="logos/loja.jpg" alt="Logo De Tudo Um Poquito">
+            <img src="logos/pjstudio.jpg" alt="Logo Studio PJ Design">
+            <img src="logos/sa.jpg" alt="Logo S.A. Pirografia">
+        </div>
+    </section>
+
+    <footer>PJ STUDIO DESIGN © 2026 | Tecnologia de Ponta & Design Estratégico</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: { delay: 5000 },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+    </script>
+</body>
+</html>
