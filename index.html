@@ -58,16 +58,16 @@
         .service-card li { margin-bottom: 18px; color: #ffffff; font-size: 20px; font-weight: 500; line-height: 1.5; text-align: left;}
         .service-card li::before { content: "✓ "; color: #ffcc00; font-weight: bold; margin-right: 12px; }
 
-        /* SEÇÃO CARROSSEL DE IMAGENS (RECUPERADA) */
+        /* CARROSSEL DE IMAGENS */
         .portfolio-section { padding: 80px 20px; text-align: center; }
-        .swiper { width: 100%; max-width: 950px; height: 500px; border-radius: 20px; background: #111; }
+        .swiper { width: 100%; max-width: 950px; height: 500px; border-radius: 20px; background: #111; margin: 0 auto; }
         .swiper-slide { background-size: contain; background-repeat: no-repeat; background-position: center; }
 
-        /* NOVA SEÇÃO DE VÍDEOS (CIRÚRGICA) */
+        /* SEÇÃO DE VÍDEOS */
         .video-section { padding: 60px 20px; text-align: center; background: rgba(0,0,0,0.3); }
         .video-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: 0 auto; }
         .video-card { width: 350px; background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
-        .video-card video { width: 100%; display: block; }
+        .video-card video { width: 100%; height: 200px; display: block; background: #000; object-fit: cover; }
         .video-card p { padding: 15px; color: #ffcc00; font-weight: bold; margin: 0; }
 
         .logos-section { padding: 100px 20px; background: #0a0a0a; text-align: center; }
@@ -127,19 +127,19 @@
         <h2>Demonstrações em Vídeo</h2>
         <div class="video-container">
             <div class="video-card">
-                <video controls muted loop preload="metadata">
+                <video controls preload="metadata">
                     <source src="WhatsApp%20Video%202026-03-15%20at%2002.58.10.mp4" type="video/mp4">
                 </video>
                 <p>Mezap & Arte Preço</p>
             </div>
             <div class="video-card">
-                <video controls muted loop preload="metadata">
+                <video controls preload="metadata">
                     <source src="BNWL1N8LQR5XMP6H%20(online-video-cutter.com).mp4" type="video/mp4">
                 </video>
                 <p>Prime Oficina</p>
             </div>
             <div class="video-card">
-                <video controls muted loop preload="metadata">
+                <video controls preload="metadata">
                     <source src="Agent_video_Pippit_20260312060052%20(1).mp4" type="video/mp4">
                 </video>
                 <p>Apresentação PJ Studio</p>
