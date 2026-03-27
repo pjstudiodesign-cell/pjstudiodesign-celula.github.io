@@ -8,48 +8,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
-        body { 
-            margin: 0; 
-            font-family: 'Segoe UI', Roboto, sans-serif; 
-            background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
-            color: #eee; 
-            overflow-x: hidden;
-        }
-        
-        header { 
-            background-color: #000; 
-            padding: 30px 50px; 
-            border-bottom: 2px solid #ffcc00; 
-            display: flex; 
-            align-items: center; 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            min-height: 120px;
-        }
-
-        .header-logo {
-            height: 150px !important;
-            width: auto !important;
-            display: block;
-            filter: brightness(1.2);
-        }
-
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('pjstudio.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            height: 400px; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-        }
+        body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%); color: #eee; overflow-x: hidden; }
+        header { background-color: #000; padding: 30px 50px; border-bottom: 2px solid #ffcc00; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; min-height: 120px; }
+        .header-logo { height: 150px !important; width: auto !important; display: block; filter: brightness(1.2); }
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('pjstudio.jpg'); background-size: cover; background-position: center; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
         .hero h1 { font-size: 36px; margin-bottom: 10px; text-transform: uppercase; color: #fff; }
         .hero h1 span { color: #ffcc00; }
         .btn-whats { background-color: #25d366; color: #fff; padding: 14px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
 
+        /* SERVIÇOS */
         .services-container { padding: 80px 20px; background-color: rgba(255, 255, 255, 0.02); text-align: center; }
         .services-container h2 { font-size: 30px; text-transform: uppercase; margin-bottom: 50px; color: #fff; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
@@ -58,22 +25,24 @@
         .service-card li { margin-bottom: 18px; color: #ffffff; font-size: 20px; font-weight: 500; line-height: 1.5; text-align: left;}
         .service-card li::before { content: "✓ "; color: #ffcc00; font-weight: bold; margin-right: 12px; }
 
-        /* CARROSSEL DE IMAGENS */
+        /* CARROSSEL COM DESCRIÇÃO E LINK */
         .portfolio-section { padding: 80px 20px; text-align: center; }
-        .swiper { width: 100%; max-width: 950px; height: 500px; border-radius: 20px; background: #111; margin: 0 auto; }
-        .swiper-slide { background-size: contain; background-repeat: no-repeat; background-position: center; }
+        .swiper { width: 100%; max-width: 950px; height: 550px; border-radius: 20px; background: #111; margin: 0 auto; }
+        .swiper-slide { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+        .slide-img { width: 100%; height: 450px; background-size: contain; background-repeat: no-repeat; background-position: center; }
+        .slide-link { display: block; margin-top: 15px; color: #ffcc00; font-size: 22px; font-weight: bold; text-decoration: none; text-transform: uppercase; border: 1px solid #ffcc00; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .slide-link:hover { background: #ffcc00; color: #000; }
 
-        /* SEÇÃO DE VÍDEOS */
+        /* VÍDEOS INDEPENDENTES */
         .video-section { padding: 60px 20px; text-align: center; background: rgba(0,0,0,0.3); }
-        .video-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: 0 auto; }
-        .video-card { width: 350px; background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
-        .video-card video { width: 100%; height: 200px; display: block; background: #000; object-fit: cover; }
-        .video-card p { padding: 15px; color: #ffcc00; font-weight: bold; margin: 0; }
+        .video-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .video-card { background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
+        .video-card video { width: 100%; height: 200px; background: #000; object-fit: cover; }
+        .video-card p { padding: 15px; color: #ffcc00; font-weight: bold; margin: 0; font-size: 16px; }
 
         .logos-section { padding: 100px 20px; background: #0a0a0a; text-align: center; }
         .logos-grid-pj { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
         .logos-grid-pj img { width: 100%; height: 180px; object-fit: contain; background-color: #fff; border-radius: 12px; padding: 20px; box-sizing: border-box; }
-
         footer { background: #000; color: #777; padding: 40px; text-align: center; border-top: 2px solid #ffcc00; }
     </style>
 </head>
@@ -93,30 +62,31 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>Identidade Visual</h3>
-                <ul>
-                    <li>Criação de Logos Profissionais</li>
-                    <li>Artes para Redes Sociais</li>
-                    <li>Cartões de Visita e Panfletos</li>
-                </ul>
+                <ul><li>Criação de Logos Profissionais</li><li>Artes para Redes Sociais</li><li>Cartões de Visita e Panfletos</li></ul>
             </div>
             <div class="service-card">
                 <h3>Desenvolvimento</h3>
-                <ul>
-                    <li>Sistemas PDV Personalizados</li>
-                    <li>Programas para Empresas</li>
-                    <li>Landing Pages e Sites</li>
-                </ul>
+                <ul><li>Sistemas PDV Personalizados</li><li>Programas para Empresas</li><li>Landing Pages e Sites</li></ul>
             </div>
         </div>
     </section>
 
     <section class="portfolio-section">
-        <h2>Nossos Sistemas</h2>
+        <h2>Conheça nossos Sistemas</h2>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('mezap.1.jpg');"></div>
-                <div class="swiper-slide" style="background-image: url('oficina.1.jpg');"></div>
-                <div class="swiper-slide" style="background-image: url('artepreco.jpg');"></div>
+                <div class="swiper-slide">
+                    <div class="slide-img" style="background-image: url('mezap.1.jpg');"></div>
+                    <a href="https://pjstudiodesign-celula.github.io/mezap" class="slide-link">Ver Catálogo Mezap</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-img" style="background-image: url('oficina.1.jpg');"></div>
+                    <a href="https://pjstudiodesign-celula.github.io/primeoficina" class="slide-link">Ver Catálogo Prime Oficina</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-img" style="background-image: url('artepreco.jpg');"></div>
+                    <a href="https://pjstudiodesign-celula.github.io/artepreco" class="slide-link">Ver Catálogo Arte Preço</a>
+                </div>
             </div>
             <div class="swiper-button-next" style="color: #ffcc00"></div>
             <div class="swiper-button-prev" style="color: #ffcc00"></div>
@@ -127,21 +97,19 @@
         <h2>Demonstrações em Vídeo</h2>
         <div class="video-container">
             <div class="video-card">
-                <video controls preload="metadata">
-                    <source src="WhatsApp%20Video%202026-03-15%20at%2002.58.10.mp4" type="video/mp4">
-                </video>
-                <p>Mezap & Arte Preço</p>
+                <video controls preload="metadata"><source src="WhatsApp%20Video%202026-03-15%20at%2002.58.10.mp4" type="video/mp4"></video>
+                <p>Mezap PDV & Delivery</p>
             </div>
             <div class="video-card">
-                <video controls preload="metadata">
-                    <source src="BNWL1N8LQR5XMP6H%20(online-video-cutter.com).mp4" type="video/mp4">
-                </video>
+                <video controls preload="metadata"><source src="Avatar_IV_Video.mp4" type="video/mp4"></video>
+                <p>Arte Preço Pro</p>
+            </div>
+            <div class="video-card">
+                <video controls preload="metadata"><source src="BNWL1N8LQR5XMP6H%20(online-video-cutter.com).mp4" type="video/mp4"></video>
                 <p>Prime Oficina</p>
             </div>
             <div class="video-card">
-                <video controls preload="metadata">
-                    <source src="Agent_video_Pippit_20260312060052%20(1).mp4" type="video/mp4">
-                </video>
+                <video controls preload="metadata"><source src="Agent_video_Pippit_20260312060052%20(1).mp4" type="video/mp4"></video>
                 <p>Apresentação PJ Studio</p>
             </div>
         </div>
@@ -150,11 +118,7 @@
     <section class="logos-section">
         <h2>Nosso Portfólio de Logos</h2>
         <div class="logos-grid-pj">
-            <img src="1.jpg" alt="Logo PJ Studio">
-            <img src="candote.jpg" alt="Logo Candote Cars">
-            <img src="loja.jpg" alt="Logo De Tudo Um Poquito">
-            <img src="pjstudio.jpg" alt="Logo Studio PJ Design">
-            <img src="sa.jpg" alt="Logo S.A. Pirografia">
+            <img src="1.jpg" alt="Logo PJ Studio"><img src="candote.jpg" alt="Logo Candote Cars"><img src="loja.jpg" alt="Logo De Tudo Um Poquito"><img src="pjstudio.jpg" alt="Logo Studio PJ Design"><img src="sa.jpg" alt="Logo S.A. Pirografia">
         </div>
     </section>
 
@@ -162,11 +126,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        });
+        var swiper = new Swiper(".mySwiper", { loop: true, autoplay: { delay: 5000 }, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" } });
     </script>
 </body>
 </html>
