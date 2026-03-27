@@ -16,7 +16,6 @@
         .hero h1 span { color: #ffcc00; }
         .btn-whats { background-color: #25d366; color: #fff; padding: 14px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
 
-        /* SERVIÇOS */
         .services-container { padding: 80px 20px; background-color: rgba(255, 255, 255, 0.02); text-align: center; }
         .services-container h2 { font-size: 30px; text-transform: uppercase; margin-bottom: 50px; color: #fff; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
@@ -25,20 +24,21 @@
         .service-card li { margin-bottom: 18px; color: #ffffff; font-size: 20px; font-weight: 500; line-height: 1.5; text-align: left;}
         .service-card li::before { content: "✓ "; color: #ffcc00; font-weight: bold; margin-right: 12px; }
 
-        /* CARROSSEL COM DESCRIÇÃO E LINK */
+        /* CARROSSEL COM LINK ATUALIZADO */
         .portfolio-section { padding: 80px 20px; text-align: center; }
-        .swiper { width: 100%; max-width: 950px; height: 550px; border-radius: 20px; background: #111; margin: 0 auto; }
-        .swiper-slide { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+        .swiper { width: 100%; max-width: 950px; height: 580px; border-radius: 20px; background: #111; margin: 0 auto; }
+        .swiper-slide { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
         .slide-img { width: 100%; height: 450px; background-size: contain; background-repeat: no-repeat; background-position: center; }
-        .slide-link { display: block; margin-top: 15px; color: #ffcc00; font-size: 22px; font-weight: bold; text-decoration: none; text-transform: uppercase; border: 1px solid #ffcc00; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .slide-link { display: block; margin-top: 20px; color: #ffcc00; font-size: 20px; font-weight: bold; text-decoration: none; text-transform: uppercase; border: 2px solid #ffcc00; padding: 12px 25px; border-radius: 5px; transition: 0.3s; }
         .slide-link:hover { background: #ffcc00; color: #000; }
 
-        /* VÍDEOS INDEPENDENTES */
+        /* VÍDEOS MAIORES E CORRIGIDOS */
         .video-section { padding: 60px 20px; text-align: center; background: rgba(0,0,0,0.3); }
-        .video-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-        .video-card { background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
-        .video-card video { width: 100%; height: 200px; background: #000; object-fit: cover; }
-        .video-card p { padding: 15px; color: #ffcc00; font-weight: bold; margin: 0; font-size: 16px; }
+        .video-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .video-card { background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
+        .video-card:hover { border-color: #ffcc00; transform: translateY(-5px); }
+        .video-card video { width: 100%; height: 250px; background: #000; object-fit: contain; }
+        .video-card p { padding: 15px; color: #ffcc00; font-weight: bold; margin: 0; font-size: 18px; }
 
         .logos-section { padding: 100px 20px; background: #0a0a0a; text-align: center; }
         .logos-grid-pj { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
@@ -77,15 +77,15 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="slide-img" style="background-image: url('mezap.1.jpg');"></div>
-                    <a href="https://pjstudiodesign-celula.github.io/mezap" class="slide-link">Ver Catálogo Mezap</a>
+                    <a href="https://lojaalves4.github.io/ARTE_PRECO_APP/" class="slide-link">Ver Catálogo Mezap</a>
                 </div>
                 <div class="swiper-slide">
                     <div class="slide-img" style="background-image: url('oficina.1.jpg');"></div>
-                    <a href="https://pjstudiodesign-celula.github.io/primeoficina" class="slide-link">Ver Catálogo Prime Oficina</a>
+                    <a href="https://lojaalves4.github.io/ARTE_PRECO_APP/" class="slide-link">Ver Catálogo Prime Oficina</a>
                 </div>
                 <div class="swiper-slide">
                     <div class="slide-img" style="background-image: url('artepreco.jpg');"></div>
-                    <a href="https://pjstudiodesign-celula.github.io/artepreco" class="slide-link">Ver Catálogo Arte Preço</a>
+                    <a href="https://lojaalves4.github.io/ARTE_PRECO_APP/" class="slide-link">Ver Catálogo Arte Preço</a>
                 </div>
             </div>
             <div class="swiper-button-next" style="color: #ffcc00"></div>
@@ -97,19 +97,27 @@
         <h2>Demonstrações em Vídeo</h2>
         <div class="video-container">
             <div class="video-card">
-                <video controls preload="metadata"><source src="WhatsApp%20Video%202026-03-15%20at%2002.58.10.mp4" type="video/mp4"></video>
+                <video controls preload="metadata">
+                    <source src="WhatsApp%20Video%202026-03-15%20at%2002.58.10.mp4#t=0.1" type="video/mp4">
+                </video>
                 <p>Mezap PDV & Delivery</p>
             </div>
             <div class="video-card">
-                <video controls preload="metadata"><source src="Avatar_IV_Video.mp4" type="video/mp4"></video>
+                <video controls preload="metadata">
+                    <source src="Avatar_IV_Video.mp4#t=0.1" type="video/mp4">
+                </video>
                 <p>Arte Preço Pro</p>
             </div>
             <div class="video-card">
-                <video controls preload="metadata"><source src="BNWL1N8LQR5XMP6H%20(online-video-cutter.com).mp4" type="video/mp4"></video>
+                <video controls preload="metadata">
+                    <source src="BNWL1N8LQR5XMP6H%20(online-video-cutter.com).mp4#t=0.1" type="video/mp4">
+                </video>
                 <p>Prime Oficina</p>
             </div>
             <div class="video-card">
-                <video controls preload="metadata"><source src="Agent_video_Pippit_20260312060052%20(1).mp4" type="video/mp4"></video>
+                <video controls preload="metadata">
+                    <source src="Agent_video_Pippit_20260312060052%20(1).mp4#t=0.1" type="video/mp4">
+                </video>
                 <p>Apresentação PJ Studio</p>
             </div>
         </div>
