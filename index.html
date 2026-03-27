@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PJ Studio Design - Oficial</title>
     
-    <meta name="description" content="PJ Studio Design - Especialista em criação de logotipos, identidades visuais e desenvolvimento de sistemas de gestão personalizados em Python.">
-    <meta name="keywords" content="Design Gráfico, Desenvolvimento Python, Logotipos, Sistemas PDV, PJ Studio">
-    <meta name="author" content="Paulo Jovane Alves">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
     <style>
         body { 
             margin: 0; 
@@ -22,24 +16,25 @@
         
         header { 
             background-color: #000; 
-            padding: 20px 50px; 
+            padding: 30px 50px; /* Aumentei o preenchimento */
             border-bottom: 2px solid #ffcc00; 
             display: flex; 
             align-items: center; 
             position: sticky;
             top: 0;
             z-index: 1000;
+            min-height: 120px; /* Garante altura mínima para o topo */
         }
 
-        /* AJUSTE CIRÚRGICO NA LOGO */
         .header-logo {
-            height: 120px !important; /* Força a altura para ficar legível */
+            height: 150px !important; /* Aumentei para 150px para ser impossível não ler */
             width: auto !important;
             display: block;
-            filter: brightness(1.2); /* Deixa a logo mais viva contra o preto */
-            flex-shrink: 0; /* Impede o cabeçalho de apertar a logo */
+            filter: brightness(1.2);
+            transition: 0.3s;
         }
 
+        /* Restante do código preservado para não quebrar o que já funciona */
         .hero { 
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('pjstudio.jpg'); 
             background-size: cover; 
@@ -73,6 +68,7 @@
 
         footer { background: #000; color: #777; padding: 40px; text-align: center; border-top: 2px solid #ffcc00; }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
