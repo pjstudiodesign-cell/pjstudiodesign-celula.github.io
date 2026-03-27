@@ -12,9 +12,10 @@
         header { background-color: #000; padding: 30px 50px; border-bottom: 2px solid #ffcc00; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; min-height: 120px; }
         .header-logo { height: 150px !important; width: auto !important; display: block; filter: brightness(1.2); }
         .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('pjstudio.jpg'); background-size: cover; background-position: center; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .hero h1 { font-size: 36px; margin-bottom: 10px; text-transform: uppercase; color: #fff; }
+        .hero h1 { font-size: 36px; margin-bottom: 10px; text-transform: uppercase; color: #fff; padding: 0 20px; }
         .hero h1 span { color: #ffcc00; }
         .btn-whats { background-color: #25d366; color: #fff; padding: 14px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        .btn-whats:hover { background-color: #128c7e; transform: scale(1.05); }
 
         .services-container { padding: 80px 20px; background-color: rgba(255, 255, 255, 0.02); text-align: center; }
         .services-container h2 { font-size: 30px; text-transform: uppercase; margin-bottom: 50px; color: #fff; }
@@ -52,7 +53,7 @@
 
     <section class="hero">
         <h1>Sua empresa merece uma <span>Presença Digital</span> Profissional</h1>
-        <a href="https://wa.me/5524981196037" target="_blank" class="btn-whats">Falar com Especialista</a>
+        <a href="https://wa.me/5524981196037?text=Olá%20PJ%20Studio!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20seus%20sistemas." target="_blank" class="btn-whats">Falar com Especialista</a>
     </section>
 
     <section class="services-container">
@@ -60,11 +61,21 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>Identidade Visual</h3>
-                <ul><li>Criação de Logos Profissionais</li><li>Artes para Redes Sociais</li><li>Cartões de Visita e Panfletos</li><li>Banners e Materiais de Divulgação</li></ul>
+                <ul>
+                    <li>Criação de Logos Profissionais</li>
+                    <li>Artes para Redes Sociais</li>
+                    <li>Cartões de Visita e Panfletos</li>
+                    <li>Banners e Materiais de Divulgação</li>
+                </ul>
             </div>
             <div class="service-card">
                 <h3>Desenvolvimento</h3>
-                <ul><li>Sistemas PDV Personalizados</li><li>Programas para Empresas</li><li>Landing Pages e Sites</li><li>Gestão de Estoque e Orçamentos</li></ul>
+                <ul>
+                    <li>Sistemas PDV Personalizados</li>
+                    <li>Programas para Empresas</li>
+                    <li>Landing Pages e Sites</li>
+                    <li>Gestão de Estoque e Orçamentos</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -124,7 +135,11 @@
     <section class="logos-section">
         <h2>Nosso Portfólio de Logos</h2>
         <div class="logos-grid-pj">
-            <img src="1.jpg" alt="Logo PJ Studio"><img src="candote.jpg" alt="Logo Candote Cars"><img src="loja.jpg" alt="Logo De Tudo Um Poquito"><img src="pjstudio.jpg" alt="Logo Studio PJ Design"><img src="sa.jpg" alt="Logo S.A. Pirografia">
+            <img src="1.jpg" alt="Logo PJ Studio">
+            <img src="candote.jpg" alt="Logo Candote Cars">
+            <img src="loja.jpg" alt="Logo De Tudo Um Poquito">
+            <img src="pjstudio.jpg" alt="Logo Studio PJ Design">
+            <img src="sa.jpg" alt="Logo S.A. Pirografia">
         </div>
     </section>
 
@@ -132,7 +147,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", { loop: true, autoplay: { delay: 5000 }, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" } });
+        var swiper = new Swiper(".mySwiper", { 
+            loop: true, 
+            autoplay: { delay: 5000 }, 
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" } 
+        });
     </script>
 </body>
 </html>
