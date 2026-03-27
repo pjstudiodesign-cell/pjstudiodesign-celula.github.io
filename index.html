@@ -9,37 +9,9 @@
     
     <style>
         body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%); color: #eee; overflow-x: hidden; }
-        
-        header { 
-            background-color: #000; 
-            padding: 30px 50px; 
-            border-bottom: 2px solid #ffcc00; 
-            display: flex; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            min-height: 120px; 
-        }
-
-        .header-logo {
-            height: 150px !important;
-            width: auto !important;
-            display: block;
-            filter: brightness(1.2);
-        }
-
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('pjstudio.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            height: 400px; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-        }
+        header { background-color: #000; padding: 30px 50px; border-bottom: 2px solid #ffcc00; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; min-height: 120px; }
+        .header-logo { height: 150px !important; width: auto !important; display: block; filter: brightness(1.2); }
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('pjstudio.jpg'); background-size: cover; background-position: center; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
         .hero h1 { font-size: 36px; margin-bottom: 10px; text-transform: uppercase; color: #fff; }
         .hero h1 span { color: #ffcc00; }
         .btn-whats { background-color: #25d366; color: #fff; padding: 14px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
@@ -138,13 +110,13 @@
             </div>
             <div class="video-card">
                 <video controls preload="auto">
-                    <source src="BNWL1N8LQR5XMP6H%20%28online-video-cutter.com%29.mp4" type="video/mp4">
+                    <source src="BNWL1N8LQR5XMP6H%20(online-video-cutter.com).MP4" type="video/mp4">
                 </video>
                 <p>Prime Oficina</p>
             </div>
             <div class="video-card">
                 <video controls preload="auto">
-                    <source src="Agent_video_Pippit_20260312060052%20%281%29.mp4" type="video/mp4">
+                    <source src="Agent_video_Pippit_20260312060052%20(1).mp4" type="video/mp4">
                 </video>
                 <p>Apresentação PJ Studio</p>
             </div>
@@ -162,11 +134,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", { 
-            loop: true, 
-            autoplay: { delay: 5000, disableOnInteraction: false }, 
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" } 
-        });
+        var swiper = new Swiper(".mySwiper", { loop: true, autoplay: { delay: 5000 }, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" } });
     </script>
 </body>
 </html>
