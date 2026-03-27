@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
+        /* MANTIDO: Toda a estrutura visual que já estava funcionando */
         body { 
             margin: 0; 
             font-family: 'Segoe UI', Roboto, sans-serif; 
@@ -58,11 +59,13 @@
         .service-card li { margin-bottom: 18px; color: #ffffff; font-size: 20px; font-weight: 500; line-height: 1.5; text-align: left;}
         .service-card li::before { content: "✓ "; color: #ffcc00; font-weight: bold; margin-right: 12px; }
 
-        /* AJUSTE PARA VÍDEOS NO CARROSSEL */
+        /* AJUSTE CIRÚRGICO PARA VÍDEOS */
         .portfolio-section { padding: 80px 20px; text-align: center; }
-        .swiper { width: 100%; max-width: 950px; height: 500px; border-radius: 20px; background: #111; }
+        .swiper { width: 100%; max-width: 950px; height: 500px; border-radius: 20px; background: #111; margin: 0 auto; }
+        .swiper-slide { display: flex; align-items: center; justify-content: center; }
         .swiper-slide video { width: 100%; height: 100%; object-fit: contain; border-radius: 20px; }
 
+        /* LOGOS - RECUPERADAS */
         .logos-section { padding: 100px 20px; background: #0a0a0a; text-align: center; }
         .logos-grid-pj { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
         .logos-grid-pj img { width: 100%; height: 180px; object-fit: contain; background-color: #fff; border-radius: 12px; padding: 20px; box-sizing: border-box; }
@@ -110,18 +113,18 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <video autoplay muted loop playsinline>
-                        <source src="WhatsApp Video 2026-03-15 at 02.58.10.mp4" type="video/mp4">
+                    <video autoplay muted loop playsinline preload="auto">
+                        <source src="WhatsApp%20Video%202026-03-15%20at%2002.58.10.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="swiper-slide">
-                    <video autoplay muted loop playsinline>
-                        <source src="BNWL1N8LQR5XMP6H (online-video-cutter.com).mp4" type="video/mp4">
+                    <video autoplay muted loop playsinline preload="auto">
+                        <source src="BNWL1N8LQR5XMP6H%20(online-video-cutter.com).mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="swiper-slide">
-                    <video autoplay muted loop playsinline>
-                        <source src="Agent_video_Pippit_20260312060052 (1).mp4" type="video/mp4">
+                    <video autoplay muted loop playsinline preload="auto">
+                        <source src="Agent_video_Pippit_20260312060052%20(1).mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -148,7 +151,7 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: true,
-            autoplay: { delay: 8000, disableOnInteraction: false },
+            autoplay: { delay: 6000, disableOnInteraction: false },
             navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
         });
     </script>
